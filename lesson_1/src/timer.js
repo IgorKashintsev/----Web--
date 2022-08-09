@@ -8,9 +8,9 @@ export const timeStart = (event) => {
 	  window.timerId = window.setInterval(timer, 1000);
   }
   function timer() {
-    let seconds = timeMinut%60
-    let minutes = timeMinut/60%60
-    let hour = timeMinut/60/60%60
+    let seconds = timeMinut%60;
+    let minutes = timeMinut/60%60;
+    let hour = timeMinut/60/60%60;
 
     if (timeMinut < 0) {
       clearInterval(window.timerId);
