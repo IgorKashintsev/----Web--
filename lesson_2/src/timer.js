@@ -1,3 +1,5 @@
+import sound from '../sound/examples_player_audio_80s_vibe.mp3'
+
 export const timeStart = (event) => {
   event.preventDefault();
   let timerInput = document.getElementById('time');
@@ -14,8 +16,7 @@ export const timeStart = (event) => {
 
     if (timeMinut < 0) {
       clearInterval(window.timerId);
-      const audio = new Audio();
-      audio.src = '../sound/examples_player_audio_80s_vibe.mp3';
+      const audio = new Audio(sound);
       audio.play();
     } else {
       let strTimer = `${Math.trunc(hour)}:${Math.trunc(minutes)}:${seconds}`;
